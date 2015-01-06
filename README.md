@@ -1,4 +1,14 @@
-R-GA-Heatmap
+R GA Heatmap
 ============
 
-Connecting Google Analytics with R to construct a daily/hourly heatmap.
+This script will connect R with Google Analytics and construct a heatmap of sessions by day and hour for a give date range.
+
+### Required Libraries
+1. RGoogleAnalytics - Connects with Google Analytics
+2. gplots - Constructs a heatmap
+
+### More
+For a detailed, step by step tutorial visit blogpost at [Analytics Pros](http://www.analyticspros.com).
+
+### Output 
+![Heatmap](figure/HeatmapOfHourlySessions.png) 
