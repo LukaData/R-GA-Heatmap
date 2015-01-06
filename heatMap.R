@@ -5,9 +5,15 @@ if (!require("gplots")) {
   install.packages("gplots", dependencies = TRUE)
   library(gplots)
 }
+
 if (!require("RGoogleAnalytics")) {
   install.packages("RGoogleAnalytics", dependencies = TRUE)
   library(RGoogleAnalytics)
+}
+
+if (!require("httpuv")) {
+  install.packages("httpuv", dependencies = TRUE)
+  library(httpuv)
 }
 
 #
