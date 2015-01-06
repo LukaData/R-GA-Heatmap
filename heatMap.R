@@ -47,11 +47,11 @@ ga.query <- QueryBuilder(query.list)
 ga.data <- GetReportData(ga.query, token)
 
 # Transform the data to be a (7x24) matrix (for the heatmap)
-turnedData <-  t(matrix(as.numeric(ga.data$sessions), nrow = 7))
+heatmapData <-  t(matrix(as.numeric(ga.data$sessions), nrow = 7))
 # Rename columns from 0-6, to Sun-Sat
-colnames(turnedData) <- c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
+colnames(heatmapData) <- c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
 # Rename rows from 00, 01, 02... to 0, 1, 2...
-rownames(turnedData) <- 0:23
+rownames(heatmapData) <- 0:23
 # Draw the heatmap
 # To see what each parameter does type "?heatmap.2" in your R console
-heatmap.2(turnedData, dendrogram="none", Rowv = NA, Colv=NA, col=cm.colors(20), margins=c(5,10), scale="none", trace="none", denscol="red", key.title="", key.xlab = "Sessions")
+heatmap.2(heatmapData, dendrogram="none", Rowv = NA, Colv=NA, col=cm.colors(20), margins=c(5,10), scale="none", trace="none", denscol="red", key.title="", key.xlab = "Sessions")
